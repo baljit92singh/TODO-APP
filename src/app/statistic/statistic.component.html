@@ -11,8 +11,8 @@
         </thead>
         <tbody>
             <tr *ngFor="let item of categoryList">
-                <td class="mdl-data-table__cell--non-numeric">{{item}}</td>
-                <td class="mdl-data-table__cell--non-numeric">0</td>
+                <td class="mdl-data-table__cell--non-numeric">{{item.category}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{item.count}}</td>
             </tr>
         </tbody>
     </table>
@@ -30,7 +30,7 @@
             <tr *ngFor="let item of statusList">
                 <td class="mdl-data-table__cell--non-numeric">{{item.status}}</td>
                 <td class="mdl-data-table__cell--non-numeric">{{item.priority}}</td>
-                <td class="mdl-data-table__cell--non-numeric">0</td>
+                <td class="mdl-data-table__cell--non-numeric">{{item.count}}</td>
             </tr>
         </tbody>
     </table>
