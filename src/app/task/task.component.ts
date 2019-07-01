@@ -50,7 +50,7 @@ export class TaskComponent implements OnInit {
     this.recentList.push(item);
     this.commonService.setItem(this.recentList)
     this.resetForm();
-    var message = "Contact created successfully"
+    var message = "Task created successfully"
     this.snackBar.open(message, "Dismiss", {
       duration: 2000,
     });
@@ -70,7 +70,7 @@ export class TaskComponent implements OnInit {
     this.recentList.push(item);
     this.commonService.setItem(this.recentList)
     this.resetForm();
-    var message = "Contact update successfully"
+    var message = "Task update successfully"
     this.snackBar.open(message, "Dismiss", {
       duration: 2000,
     });
@@ -97,7 +97,8 @@ export class TaskComponent implements OnInit {
   deleteContact(item) {
     console.log(item);
     this.recentList.splice(this.recentList.indexOf(item), 1);
-    var message = "Contact delete successfully"
+    this.commonService.setItem(this.recentList)
+    var message = "Task delete successfully"
     this.snackBar.open(message, "Dismiss", {
       duration: 2000,
     });
